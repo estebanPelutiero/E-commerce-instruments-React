@@ -13,8 +13,14 @@
   margin: 30px;
 }
 
-.navbar h1 {
+
+.navbar a {
   padding: 10px;
+  text-decoration: none;
+}
+
+.navbar a:visited {
+  color: black;
 }
 
 .navbar ul {
@@ -51,3 +57,121 @@
 .greeting p {
   font-size: 2em;
 }
+
+.count {
+  display: flex;
+  justify-content: center;
+  margin-top: 1em;
+  font-size: 2em;
+}
+
+.btnCount {
+  width: 2em;
+  padding: 2px;
+  margin: 0 15px;
+}
+
+.btnAddCart {
+  width: auto;
+}
+
+.card {
+  width: 30%;
+  margin: 20px;
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 1px 10px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 400ms ease-in-out;
+}
+
+.card:hover {
+  box-shadow: 1px 1px 7px rgba(0,0,0,0.4);
+  transform: translateY(-0.5%);
+}
+
+.card img {
+  width: 12em;
+  margin: 2em 0;
+}
+
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 30px;
+}
+
+.active {
+  border: 0.2px solid darkgrey;
+}
+
+.link {
+  text-decoration: none;
+  padding: 4px;
+  border-radius: 3px;
+  margin: 0 10px;
+  color: black;
+}
+
+.detailLink {
+  padding: 10px;
+  margin: 20px 0;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 3px;
+  background-color: gainsboro;
+  color: black;
+}
+
+.article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.article h2, h3 {
+  margin: 5px;
+}
+
+.detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  width: 50%;
+  height: 90%;
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 1px 10px rgba(0,0,0,0.4);
+}
+
+.detail img {
+  width: 14em;
+}
+
+.detail article {
+  margin: 20px;
+}
+
+.detail article h2 {
+  margin: 20px 0;
+}
+
+.detail article h3 {
+  margin: 20px 0 10px 0;
+  font-size: 2em;
+}
+
+.detailDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+

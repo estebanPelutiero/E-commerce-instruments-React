@@ -13,7 +13,8 @@ const Item = ({product}) => {
         </article>
         <Link className='detailLink' to={`/detail/${product.id}`}>Ver detalle</Link>
     </div>
-  )
+    
+  );
   
 }
 

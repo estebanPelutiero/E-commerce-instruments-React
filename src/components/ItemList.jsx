@@ -3,6 +3,7 @@ import Item from './Item';
 
 const ItemList = ({ items }) => {
   return (
+
     <div className='cardContainer'>
         {
           items.map((product) => {
@@ -10,9 +11,11 @@ const ItemList = ({ items }) => {
               <Item product={product} key={product.id}/>
             )
           })
-        }
+        };
     </div>
-  )
+
+  );
+
 }
 
 export default ItemList;

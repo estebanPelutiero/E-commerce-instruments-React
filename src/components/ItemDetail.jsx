@@ -1,11 +1,19 @@
 import React from 'react'
 import ItemCount from './ItemCount'
+import { useContext } from 'react';
+import { CartContext } from '../context/CartContext';
+import GoToCartBtn from './GoToCartBtn';
 
 const ItemDetail = ({ item }) => {
 
-    const onAdd = (quantity) => console.log(quantity); 
+    const { addItem } = useContext(CartContext);
+
+    const onAdd = (quantity) => {
+        addItem(item, quantity);
+    }; 
 
     return (
+
         <div className='detail'>
             <img src={item.img} alt={item.title} />
             <article>
@@ -13,10 +21,13 @@ const ItemDetail = ({ item }) => {
                 <p>{item.description}</p>
                 <h3>$ {item.price}.-</h3>
             </article>
-            <ItemCount stock={item.stock} onAdd={onAdd} />
+            <div className='flexBtn'>
+                <ItemCount stock={item.stock} onAdd={onAdd} />
+                <GoToCartBtn />
+            </div>
         </div>
-    )
-
+    );
+    
 }
 
 export default ItemDetail

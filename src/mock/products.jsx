@@ -11,7 +11,7 @@ export const products = [
     {
         id: 2,
         title: "Guitarra Grestch 335",
-        price: 270000,
+        price: 250000,
         stock: 4,
         category: "guitarras",
         img: "https://res.cloudinary.com/dn6w1lstv/image/upload/v1666807855/Ecommerce-React/grestch335_gp6sm3.png",
@@ -19,7 +19,7 @@ export const products = [
     },
     {
         id: 3,
-        title: "Bajo Fender precision",
+        title: "Bajo Fender Precision",
         price: 220000,
         stock: 7,
         category: "bajos",
@@ -28,27 +28,3 @@ export const products = [
     }
 ];
 
-// resuelve promesa que devuelve un [] con varios productos
-
-export const getFilterProducts = (productCategory) => {
-        
-    return new Promise((res) => {
-
-        const filterProducts = products.filter((prod) => prod.category === productCategory);
-
-        setTimeout(()=> {
-            res(filterProducts);
-        }, 2000);
-    });
-  }
-
-
-  export const getProducts = () => {
-
-    return new Promise((res) => {
-        setTimeout(() => {
-            res(products);
-        }, 2000);
-    })
-
-  }
